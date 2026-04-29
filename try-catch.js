@@ -11,5 +11,5 @@ try {
     setAge(UserActivation, "thirty"); //wrong type
 } catch (err) {
     console.error("setAge failed:", err.message);
-    // revover, rentry, or surface to the UI
+    // recover, retry, or surface to the UI
 }
