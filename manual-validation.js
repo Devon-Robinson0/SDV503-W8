@@ -7,7 +7,7 @@ function validateBook(input) {
     // presence + type
     if (typeof input.id !== 'string' || input.id.trim() === "") errors.push("id is required");
     if (typeof input.title !== 'string' || input.title.trim() === "") errors.push("title is required");
-    if (typeof input.author !== 'string') errors.push('author musyt be a string');
+    if (typeof input.author !== 'string') errors.push('author must be a string');
 
     // Range
     const thisYear = new Date().getFullYear();
@@ -16,3 +16,6 @@ function validateBook(input) {
     }
     return errors;
 }
+
+const result = validateBook(incomingBook);
+if (result.length > 0) throw new Error('Invalid book ' + result.join(", "));
