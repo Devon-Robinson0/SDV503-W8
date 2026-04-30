@@ -16,6 +16,13 @@ function validateBook(input) {
     }
     return errors;
 }
+const book = {
+    id: "U_001",
+    title: "the book",
+    author: "author",
+    year: 2025
+};
 
-const result = validateBook(incomingBook);
+const result = validateBook(book);
+console.log(typeof result);
 if (result.length > 0) throw new Error('Invalid book ' + result.join(", "));
